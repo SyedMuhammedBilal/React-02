@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; 
+import ControlledComponent from './ControlledComponent'
 import './App.css';
 
 /* Functional Component */
@@ -21,6 +23,14 @@ function DisplayNames(props){
 
 /* Class Component */
 class ListItems extends Component {
+
+  static propTypes = {
+
+    cityNames: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array
+    ])
+  }
 
   render() {
     return(
@@ -57,7 +67,7 @@ class App extends Component {
     return(
       <div>
         <ListItems cityNames={this.state.cityNames} plzChangeTheState={this.changeTheState} />
-
+        <ControlledComponent />
       </div>
     )
   }
