@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
 import ControlledComponent from './ControlledComponent'
+import LifeCycle from './LifeCycle'
 import './App.css';
 
 /* Functional Component */
@@ -66,8 +67,9 @@ class App extends Component {
     /*const names = ["Bilal", "Ahmed", "Abdulrehman"]*/
     return(
       <div>
-        <ListItems cityNames={this.state.cityNames} plzChangeTheState={this.changeTheState} />
-        <ControlledComponent />
+        {/*<ListItems cityNames={this.state.cityNames} plzChangeTheState={this.changeTheState} />
+        <ControlledComponent />*/}
+        <LifeCycle />
       </div>
     )
   }

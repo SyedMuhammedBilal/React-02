@@ -11,7 +11,7 @@ export class ControlledComponent extends Component {
     }
     
     whenClick = (event) => {
-        console.log(event.targettarget)
+        console.log(event.target)
         const {name, value} = event.target
         this.setState({
             [name]: value
